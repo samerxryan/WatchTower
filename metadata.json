@@ -1,0 +1,6 @@
+{
+  "name": "WatchTower",
+  "description": "Minimalist SaaS project and task management platform with JWT authentication, server-side RBAC, Kanban board, Calendar, Timeline, and bilingual Light/Dark interface.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
