@@ -1,7 +1,7 @@
 import crypto from 'node:crypto';
 import dotenv from 'dotenv';
 
-dotenv.config();
+dotenv.config({ quiet: true });
 
 const nodeEnv = process.env.NODE_ENV || 'development';
 const isProduction = nodeEnv === 'production';
@@ -17,6 +17,33 @@ function resolveJwtSecret() {
   }
   // Ephemeral CSPRNG secret for local/test runs when JWT_SECRET is not provided in .env
   return crypto.randomBytes(32).toString('hex');
+}
+
+function parsePositiveInt(value, fallback) {
+  const parsed = Number(value);
+  return Number.isInteger(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function parseJwtExpiresIn(value) {
+  const configured = value || '15m';
+  if (/^\d+(s|m|h|d)$/.test(configured) || /^\d+$/.test(configured)) {
+    return configured;
+  }
+  if (isProduction) {
+    throw new Error('JWT_EXPIRES_IN must be a duration such as 15m, 1h or 900.');
+  }
+  return '15m';
+}
+
+// Express only honours X-Forwarded-* headers when explicitly told to trust a
+// proxy. Defaulting to false prevents clients from spoofing req.ip and
+// bypassing the login/reset rate limits.
+function parseTrustProxy(value) {
+  const raw = String(value || '').trim();
+  if (!raw || raw === '0' || raw === 'false') return false;
+  if (raw === 'true') return true;
+  if (/^\d+$/.test(raw)) return Number(raw);
+  return raw;
 }
 
 export const env = {
@@ -40,7 +67,24 @@ export const env = {
   },
   jwt: {
     secret: resolveJwtSecret(),
-    expiresIn: process.env.JWT_EXPIRES_IN || '15m',
+    expiresIn: parseJwtExpiresIn(process.env.JWT_EXPIRES_IN),
+    refreshDays: parsePositiveInt(process.env.JWT_REFRESH_DAYS, 7),
     cookieSecure: process.env.COOKIE_SECURE === 'true' || isProduction,
+  },
+  cookies: {
+    accessName: 'wt_access',
+    refreshName: 'wt_refresh',
+    sameSite: 'lax',
+  },
+  security: {
+    bcryptRounds: parsePositiveInt(process.env.BCRYPT_ROUNDS, 12),
+    // Local development helper: expose the reset token so the UI flow can be tested
+    // without an email provider. Never enabled in production.
+    exposeResetToken: !isProduction && process.env.EXPOSE_RESET_TOKEN !== 'false',
+    resetTokenMinutes: parsePositiveInt(process.env.RESET_TOKEN_MINUTES, 30),
+    trustProxy: parseTrustProxy(process.env.TRUST_PROXY),
+    // Limiters stay active in production/development. Tests opt in explicitly so
+    // 429 behaviour can be verified without affecting the rest of the suite.
+    rateLimiting: !isTest || process.env.RATE_LIMIT_ENABLED === 'true',
   },
 };

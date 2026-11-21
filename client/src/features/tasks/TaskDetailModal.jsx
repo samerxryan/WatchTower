@@ -15,6 +15,7 @@ function TaskDetailContent({ task, onClose, onUpdated }) {
   const { user } = useAuth();
   const { t, formatDate } = useI18n();
 
+  const [project, setProject] = useState(null);
   const [members, setMembers] = useState([]);
   const [comments, setComments] = useState([]);
   const [commentText, setCommentText] = useState('');
@@ -33,7 +34,14 @@ function TaskDetailContent({ task, onClose, onUpdated }) {
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [error, setError] = useState('');
 
-  const canManageTask = user?.role === 'ADMIN' || user?.role === 'PROJECT_MANAGER';
+  // Mirror the backend rule: admins, the project owner and project-level
+  // managers may edit full task fields. Plain members can only move status.
+  const canManageTask =
+    user?.role === 'ADMIN' ||
+    Number(project?.ownerId) === Number(user?.id) ||
+    members.some(
+      (m) => Number(m.userId) === Number(user?.id) && m.projectRole === 'MANAGER',
+    );
 
   const fetchExtras = useCallback(async () => {
     const [projRes, commRes] = await Promise.all([
@@ -41,6 +49,7 @@ function TaskDetailContent({ task, onClose, onUpdated }) {
       tasksApi.listComments(task.id),
     ]);
     return {
+      project: projRes?.data || null,
       members: projRes?.data?.members || [],
       comments: commRes?.data || [],
     };
@@ -51,6 +60,7 @@ function TaskDetailContent({ task, onClose, onUpdated }) {
     fetchExtras()
       .then((res) => {
         if (!active) return;
+        setProject(res.project);
         setMembers(res.members);
         setComments(res.comments);
       })
@@ -62,6 +72,7 @@ function TaskDetailContent({ task, onClose, onUpdated }) {
 
   const reloadExtras = async () => {
     const res = await fetchExtras();
+    setProject(res.project);
     setMembers(res.members);
     setComments(res.comments);
   };
@@ -222,10 +233,11 @@ function TaskDetailContent({ task, onClose, onUpdated }) {
       ) : (
         <form onSubmit={handleSaveEdit} className="space-y-4">
           <div className="space-y-1.5">
-            <label className="block text-xs font-medium text-[#64748B] dark:text-[#9CA3AF]">
+            <label htmlFor="task-edit-title" className="block text-xs font-medium text-[#64748B] dark:text-[#9CA3AF]">
               {t('tasks.taskTitle')}
             </label>
             <input
+              id="task-edit-title"
               type="text"
               required
               value={form.title}
@@ -234,10 +246,11 @@ function TaskDetailContent({ task, onClose, onUpdated }) {
             />
           </div>
           <div className="space-y-1.5">
-            <label className="block text-xs font-medium text-[#64748B] dark:text-[#9CA3AF]">
+            <label htmlFor="task-edit-description" className="block text-xs font-medium text-[#64748B] dark:text-[#9CA3AF]">
               {t('common.description')}
             </label>
             <textarea
+              id="task-edit-description"
               rows={3}
               value={form.description}
               onChange={(e) => setForm({ ...form, description: e.target.value })}
@@ -246,10 +259,11 @@ function TaskDetailContent({ task, onClose, onUpdated }) {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="space-y-1.5">
-              <label className="block text-xs font-medium text-[#64748B] dark:text-[#9CA3AF]">
+              <label htmlFor="task-edit-priority" className="block text-xs font-medium text-[#64748B] dark:text-[#9CA3AF]">
                 {t('common.priority')}
               </label>
               <select
+                id="task-edit-priority"
                 value={form.priority}
                 onChange={(e) => setForm({ ...form, priority: e.target.value })}
                 className="w-full px-3 py-2 text-sm rounded-lg border border-[#E2E8F0] dark:border-[#273449] bg-[#F8FAFC] dark:bg-[#0B1120]"
@@ -260,10 +274,11 @@ function TaskDetailContent({ task, onClose, onUpdated }) {
               </select>
             </div>
             <div className="space-y-1.5">
-              <label className="block text-xs font-medium text-[#64748B] dark:text-[#9CA3AF]">
+              <label htmlFor="task-edit-assignee" className="block text-xs font-medium text-[#64748B] dark:text-[#9CA3AF]">
                 {t('common.assignee')}
               </label>
               <select
+                id="task-edit-assignee"
                 value={form.assigneeId}
                 onChange={(e) => setForm({ ...form, assigneeId: e.target.value })}
                 className="w-full px-3 py-2 text-sm rounded-lg border border-[#E2E8F0] dark:border-[#273449] bg-[#F8FAFC] dark:bg-[#0B1120]"
@@ -276,10 +291,11 @@ function TaskDetailContent({ task, onClose, onUpdated }) {
             </div>
           </div>
           <div className="space-y-1.5">
-            <label className="block text-xs font-medium text-[#64748B] dark:text-[#9CA3AF]">
+            <label htmlFor="task-edit-due-date" className="block text-xs font-medium text-[#64748B] dark:text-[#9CA3AF]">
               {t('common.dueDate')}
             </label>
             <input
+              id="task-edit-due-date"
               type="date"
               value={form.dueDate}
               onChange={(e) => setForm({ ...form, dueDate: e.target.value })}

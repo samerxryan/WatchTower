@@ -11,6 +11,7 @@ export class AppError extends Error {
 export const Errors = {
   validation: (message = 'Les données fournies sont invalides.', details = []) =>
     new AppError(400, 'VALIDATION_ERROR', message, details),
+  badRequest: (code, message, details = []) => new AppError(400, code, message, details),
   unauthorized: (message = 'Authentification requise.') =>
     new AppError(401, 'UNAUTHORIZED', message),
   forbidden: (message = 'Permissions insuffisantes pour cette action.') =>

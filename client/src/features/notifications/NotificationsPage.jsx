@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { Bell, CheckCheck } from 'lucide-react';
 import { useI18n } from '../../i18n/I18nContext.jsx';
-import { notificationsApi } from '../../services/watchtowerApi.js';
+import { broadcastNotificationsUpdated, notificationsApi } from '../../services/watchtowerApi.js';
 import { Button } from '../../components/ui/Button.jsx';
 import { EmptyState, ErrorBanner, LoadingSkeleton } from '../../components/ui/DataState.jsx';
 
@@ -37,8 +37,10 @@ export function NotificationsPage() {
 
   const reload = async () => {
     try {
-      setNotifications(await fetchNotifications());
+      const rows = await fetchNotifications();
+      setNotifications(rows);
       setError('');
+      broadcastNotificationsUpdated(rows.filter((item) => !item.isRead).length);
     } catch (err) {
       setError(err?.message || t('common.errorTitle'));
     }

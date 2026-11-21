@@ -23,6 +23,10 @@ export async function runMigrations() {
   });
 
   try {
+    // DATETIME defaults use the session time zone; keep migration-created
+    // timestamps in UTC like the rest of the application.
+    await connection.query("SET time_zone = '+00:00'");
+
     await connection.query(`
       CREATE TABLE IF NOT EXISTS schema_migrations (
         version VARCHAR(120) PRIMARY KEY,

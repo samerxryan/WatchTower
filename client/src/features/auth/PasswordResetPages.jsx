@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { AuthLayout } from './LoginPage.jsx';
 import { Button } from '../../components/ui/Button.jsx';
 import { ErrorBanner } from '../../components/ui/DataState.jsx';
@@ -68,7 +68,10 @@ export function ForgotPasswordPage() {
 
 export function ResetPasswordPage() {
   const { t } = useI18n();
-  const [token, setToken] = useState('');
+  const [searchParams] = useSearchParams();
+  // Reset links carry the token in the query string; keep the manual field as
+  // a fallback for tokens copied out of an email or API response.
+  const [token, setToken] = useState(() => searchParams.get('token') || '');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [submitting, setSubmitting] = useState(false);

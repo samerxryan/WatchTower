@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { GanttChartSquare } from 'lucide-react';
 import { useI18n } from '../../i18n/I18nContext.jsx';
-import { projectsApi } from '../../services/watchtowerApi.js';
+import { insightsApi } from '../../services/watchtowerApi.js';
 import { ProjectStatusLabel } from '../../components/ui/SemanticLabels.jsx';
 import { EmptyState, ErrorBanner, LoadingSkeleton } from '../../components/ui/DataState.jsx';
 
@@ -13,7 +13,8 @@ export function TimelinePage() {
   const [error, setError] = useState('');
 
   const fetchProjects = useCallback(async () => {
-    const res = await projectsApi.list();
+    // Dedicated endpoint returns every accessible project (no 20-row cap).
+    const res = await insightsApi.timelineProjects();
     return res?.data || [];
   }, []);
 

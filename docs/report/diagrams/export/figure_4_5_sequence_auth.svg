@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1040" viewBox="0 0 1240 1040">
+<defs>
+<marker id="arrow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#0F172A"/></marker>
+<marker id="arrow-indigo" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#4F46E5"/></marker>
+<marker id="arrow-red" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#DC2626"/></marker>
+<marker id="arrow-green" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#15803D"/></marker>
+<marker id="arrow-muted" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#64748B"/></marker>
+<marker id="open" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8" fill="none" stroke="#475569" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="open-indigo" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8" fill="none" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="open-red" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8" fill="none" stroke="#DC2626" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="hollow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.4"/></marker>
+<marker id="diamond" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,4 L5,0 L10,4 L5,8 z" fill="#0F172A"/></marker>
+<marker id="diamond-white" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.4"/></marker>
+</defs>
+<rect width="1240" height="1040" fill="#FFFFFF"/>
+<text x="40" y="28" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A" text-anchor="start">ScÃ©nario 1 â€” inscription et connexion</text>
+<text x="1200" y="28" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="normal" fill="#64748B" text-anchor="end">server/src/modules/auth/auth.routes.js Â· services/authService.js Â· repositories/userRepository.js</text>
+<rect x="59.0" y="46" width="172" height="62" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.35"/>
+<text x="145.0" y="64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" fill="#0F172A" text-anchor="middle">Utilisateur</text>
+<text x="145.0" y="76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="normal" fill="#0F172A" text-anchor="middle"></text>
+<line x1="145.0" y1="108" x2="145.0" y2="840" stroke="#94A3B8" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="5 5"/>
+<rect x="296.5" y="46" width="172" height="62" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.35"/>
+<text x="382.5" y="64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" fill="#0F172A" text-anchor="middle">Interface React</text>
+<text x="382.5" y="76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="normal" fill="#0F172A" text-anchor="middle">RegisterPage / LoginPage</text>
+<line x1="382.5" y1="108" x2="382.5" y2="840" stroke="#94A3B8" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="5 5"/>
+<rect x="534.0" y="46" width="172" height="62" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.35"/>
+<text x="620.0" y="64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" fill="#0F172A" text-anchor="middle">API REST</text>
+<text x="620.0" y="76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="normal" fill="#0F172A" text-anchor="middle">auth.routes.js</text>
+<line x1="620.0" y1="108" x2="620.0" y2="840" stroke="#94A3B8" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="5 5"/>
+<rect x="771.5" y="46" width="172" height="62" rx="8" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.35"/>
+<text x="857.5" y="64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" fill="#0F172A" text-anchor="middle">authService</text>
+<text x="857.5" y="76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="normal" fill="#0F172A" text-anchor="middle"></text>
+<line x1="857.5" y1="108" x2="857.5" y2="840" stroke="#94A3B8" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="5 5"/>
+<rect x="1009.0" y="46" width="172" height="62" rx="8" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.35"/>
+<text x="1095.0" y="64" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="700" fill="#0F172A" text-anchor="middle">MySQL 8</text>
+<text x="1095.0" y="76" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="normal" fill="#0F172A" text-anchor="middle">users, user_sessions, audit_logs</text>
+<line x1="1095.0" y1="108" x2="1095.0" y2="840" stroke="#94A3B8" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="5 5"/>
+<rect x="613.0" y="190" width="14" height="380" rx="0" fill="#E0E7FF" stroke="#4F46E5" stroke-width="1" opacity="0.85"/>
+<rect x="850.5" y="374" width="14" height="56" rx="0" fill="#E0E7FF" stroke="#4F46E5" stroke-width="1" opacity="0.85"/>
+<rect x="1088.0" y="280" width="14" height="60" rx="0" fill="#E0E7FF" stroke="#4F46E5" stroke-width="1" opacity="0.85"/>
+<line x1="145.0" y1="150" x2="382.5" y2="150" stroke="#475569" stroke-width="1.4" stroke-linecap="round" marker-end="url(#open)"/>
+<rect x="173.125" y="137" width="181.25" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="263.75" y="147" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="600" fill="#475569" text-anchor="middle">Renseigne l&#x27;inscription et soumet</text>
+<circle cx="52" cy="150" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="153.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">1</text>
+<line x1="382.5" y1="196" x2="620.0" y2="196" stroke="#475569" stroke-width="1.4" stroke-linecap="round" marker-end="url(#open)"/>
+<rect x="429.0" y="183" width="144.5" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="501.25" y="193" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="600" fill="#475569" text-anchor="middle">POST /api/v1/auth/register</text>
+<circle cx="52" cy="196" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="199.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">2</text>
+<path d="M 620.0 242 L 644.0 242 L 644.0 258 L 626.0 258" fill="none" stroke="#4F46E5" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#open)"/>
+<rect x="647.0" y="229" width="176.0" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="650.0" y="239" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="600" fill="#4F46E5" text-anchor="start">validate(registerSchema) â€” Zod</text>
+<circle cx="52" cy="242" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="245.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">3</text>
+<line x1="620.0" y1="288" x2="1095.0" y2="288" stroke="#475569" stroke-width="1.4" stroke-linecap="round" marker-end="url(#open)"/>
+<rect x="766.875" y="275" width="181.25" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="857.5" y="285" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="600" fill="#475569" text-anchor="middle">userRepository.emailExists(email)</text>
+<circle cx="52" cy="288" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="291.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">4</text>
+<line x1="1095.0" y1="334" x2="620.0" y2="334" stroke="#475569" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<rect x="837.75" y="321" width="39.5" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="857.5" y="331" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="normal" fill="#475569" text-anchor="middle">absent</text>
+<circle cx="52" cy="334" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="337.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">5</text>
+<line x1="620.0" y1="380" x2="857.5" y2="380" stroke="#475569" stroke-width="1.4" stroke-linecap="round" marker-end="url(#open)"/>
+<rect x="640.25" y="367" width="197.0" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="738.75" y="377" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="600" fill="#475569" text-anchor="middle">hashPassword(password) â€” bcrypt 12</text>
+<circle cx="52" cy="380" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="383.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">6</text>
+<line x1="857.5" y1="426" x2="620.0" y2="426" stroke="#475569" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<rect x="703.25" y="413" width="71.0" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="738.75" y="423" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="normal" fill="#475569" text-anchor="middle">passwordHash</text>
+<circle cx="52" cy="426" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="429.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">7</text>
+<line x1="620.0" y1="472" x2="1095.0" y2="472" stroke="#475569" stroke-width="1.4" stroke-linecap="round" marker-end="url(#open)"/>
+<rect x="766.875" y="459" width="181.25" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="857.5" y="469" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="600" fill="#475569" text-anchor="middle">INSERT users (role = TEAM_MEMBER)</text>
+<circle cx="52" cy="472" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="475.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">8</text>
+<line x1="1095.0" y1="518" x2="620.0" y2="518" stroke="#475569" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<rect x="819.375" y="505" width="76.25" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="857.5" y="515" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="normal" fill="#475569" text-anchor="middle">ligne crÃ©Ã©e</text>
+<circle cx="52" cy="518" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="521.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">9</text>
+<line x1="620.0" y1="564" x2="382.5" y2="564" stroke="#475569" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<rect x="415.875" y="551" width="170.75" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="501.25" y="561" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="normal" fill="#475569" text-anchor="middle">201 { success, data: { user } }</text>
+<circle cx="52" cy="564" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="567.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">10</text>
+<line x1="382.5" y1="610" x2="145.0" y2="610" stroke="#475569" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<rect x="199.375" y="597" width="128.75" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="263.75" y="607" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="normal" fill="#475569" text-anchor="middle">Redirection vers /login</text>
+<circle cx="52" cy="610" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="613.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">11</text>
+<line x1="145.0" y1="656" x2="382.5" y2="656" stroke="#475569" stroke-width="1.4" stroke-linecap="round" marker-end="url(#open)"/>
+<rect x="149.5" y="643" width="228.5" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="263.75" y="653" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="600" fill="#475569" text-anchor="middle">Saisit email / mot de passe et se connecte</text>
+<circle cx="52" cy="656" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="659.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">12</text>
+<line x1="382.5" y1="702" x2="620.0" y2="702" stroke="#475569" stroke-width="1.4" stroke-linecap="round" marker-end="url(#open)"/>
+<rect x="436.875" y="689" width="128.75" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="501.25" y="699" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="600" fill="#475569" text-anchor="middle">POST /api/v1/auth/login</text>
+<circle cx="52" cy="702" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="705.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">13</text>
+<line x1="620.0" y1="748" x2="1095.0" y2="748" stroke="#475569" stroke-width="1.4" stroke-linecap="round" marker-end="url(#open)"/>
+<rect x="738.0" y="735" width="239.0" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="857.5" y="745" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="600" fill="#475569" text-anchor="middle">findUserByEmail + INSERT audit LOGIN_SUCCESS</text>
+<circle cx="52" cy="748" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="751.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">14</text>
+<line x1="1095.0" y1="794" x2="620.0" y2="794" stroke="#475569" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="6 4" marker-end="url(#open)"/>
+<rect x="790.5" y="781" width="134.0" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="857.5" y="791" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="normal" fill="#475569" text-anchor="middle">utilisateur actif + hash</text>
+<circle cx="52" cy="794" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="797.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">15</text>
+<line x1="620.0" y1="840" x2="857.5" y2="840" stroke="#475569" stroke-width="1.4" stroke-linecap="round" marker-end="url(#open)"/>
+<rect x="648.125" y="827" width="181.25" height="14" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="738.75" y="837" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.0" font-weight="600" fill="#475569" text-anchor="middle">verifyPassword puis createSession</text>
+<circle cx="52" cy="840" r="9" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+<text x="52" y="843.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="8.6" font-weight="normal" fill="#64748B" text-anchor="middle">16</text>
+<rect x="830" y="870" width="370" height="93" rx="6" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="1.1"/>
+<text x="840" y="886" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="700" fill="#0F172A" text-anchor="start">Retour de connexion (suite)</text>
+<text x="840" y="901" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.3" font-weight="normal" fill="#475569" text-anchor="start">authService â†’ MySQL : INSERT user_sessions(token_hash)</text>
+<text x="840" y="916" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.3" font-weight="normal" fill="#475569" text-anchor="start">authService â†’ API : JWT wt_access + token wt_refresh</text>
+<text x="840" y="931" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.3" font-weight="normal" fill="#475569" text-anchor="start">API â†’ React : 200 + cookies HttpOnly (SameSite=Lax)</text>
+<text x="840" y="946" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.3" font-weight="normal" fill="#475569" text-anchor="start">React â†’ Utilisateur : session active, navigation vers /</text>
+<line x1="40" y1="975" x2="1200" y2="975" stroke="#CBD5E1" stroke-width="1" stroke-linecap="round"/>
+<text x="40" y="998" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.6" font-weight="normal" fill="#64748B" text-anchor="start">Lecture : les flÃ¨ches pleines sont des appels, les flÃ¨ches en pointillÃ©s des retours ; les bandes verticales reprÃ©sentent l&#x27;activation du composant.</text>
+</svg>

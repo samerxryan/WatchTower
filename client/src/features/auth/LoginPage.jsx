@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Moon, Shield, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 import { WatchTowerLogo } from '../../components/ui/WatchTowerLogo.jsx';
 import { Button } from '../../components/ui/Button.jsx';
 import { ErrorBanner } from '../../components/ui/DataState.jsx';
@@ -69,7 +69,7 @@ export function AuthLayout({ title, subtitle, children }) {
 
 export function LoginPage() {
   const { t } = useI18n();
-  const { login, enterPreviewMode } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
@@ -93,11 +93,6 @@ export function LoginPage() {
     } finally {
       setSubmitting(false);
     }
-  };
-
-  const handlePreview = async (role) => {
-    await enterPreviewMode(role);
-    navigate('/', { replace: true });
   };
 
   return (
@@ -155,28 +150,6 @@ export function LoginPage() {
           {t('auth.signUp')}
         </Link>
       </p>
-
-      {/* Transparent Frontend Preview Switch for exploring UI before backend is connected */}
-      <div className="pt-5 border-t border-[#E2E8F0] dark:border-[#273449] space-y-3">
-        <div className="flex items-center gap-2 text-xs font-semibold">
-          <Shield className="w-4 h-4 text-[#6366F1] dark:text-[#818CF8] shrink-0" aria-hidden="true" />
-          <span>{t('auth.previewSectionTitle')}</span>
-        </div>
-        <p className="text-xs text-[#64748B] dark:text-[#9CA3AF] leading-relaxed">
-          {t('auth.previewSectionDesc')}
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-          <Button variant="secondary" size="sm" onClick={() => handlePreview('ADMIN')}>
-            {t('roles.ADMIN')}
-          </Button>
-          <Button variant="secondary" size="sm" onClick={() => handlePreview('PROJECT_MANAGER')}>
-            {t('roles.PROJECT_MANAGER')}
-          </Button>
-          <Button variant="secondary" size="sm" onClick={() => handlePreview('TEAM_MEMBER')}>
-            {t('roles.TEAM_MEMBER')}
-          </Button>
-        </div>
-      </div>
     </AuthLayout>
   );
 }

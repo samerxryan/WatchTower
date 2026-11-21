@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="860" viewBox="0 0 1240 860">
+<defs>
+<marker id="arrow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#0F172A"/></marker>
+<marker id="arrow-indigo" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#4F46E5"/></marker>
+<marker id="arrow-red" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#DC2626"/></marker>
+<marker id="arrow-green" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#15803D"/></marker>
+<marker id="arrow-muted" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#64748B"/></marker>
+<marker id="open" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8" fill="none" stroke="#475569" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="open-indigo" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8" fill="none" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="open-red" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8" fill="none" stroke="#DC2626" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="hollow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.4"/></marker>
+<marker id="diamond" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,4 L5,0 L10,4 L5,8 z" fill="#0F172A"/></marker>
+<marker id="diamond-white" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.4"/></marker>
+</defs>
+<rect width="1240" height="860" fill="#FFFFFF"/>
+<text x="40" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A" text-anchor="start">Architecture logique en trois couches</text>
+<text x="1200" y="26" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#64748B" text-anchor="end">Source : code source WatchTower (client/src, server/src)</text>
+<rect x="40" y="44" width="1160" height="222" rx="14" fill="#F5F3FF" stroke="#C7D2FE" stroke-width="1.4"/>
+<text x="60" y="70" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#4F46E5" text-anchor="start">NAVIGATEUR — APPLICATION MONOPAGE REACT 19</text>
+<text x="60" y="87" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="start">Vite 8 en développement · build statique servi par Express en production</text>
+<rect x="60" y="104" width="200" height="138" rx="9" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="1.2"/>
+<text x="72" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A" text-anchor="start">React Router 7</text>
+<text x="72" y="150.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">Routes publiques : /login,</text>
+<text x="72" y="166.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">/register, /forgot-password,</text>
+<text x="72" y="182.4" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">/reset-password</text>
+<text x="72" y="198.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">Routes protégées + garde</text>
+<text x="72" y="214.8" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">de rôle (/team)</text>
+<rect x="276" y="104" width="330" height="138" rx="9" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="1.2"/>
+<text x="288" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A" text-anchor="start">Pages et composants métier</text>
+<text x="288" y="150.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">Dashboard · Projets · Détail projet</text>
+<text x="288" y="166.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">Mes tâches · Kanban · Calendrier</text>
+<text x="288" y="182.4" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">Timeline · Rapports · Équipe</text>
+<text x="288" y="198.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">Notifications · Réglages</text>
+<rect x="622" y="104" width="260" height="138" rx="9" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="1.2"/>
+<text x="634" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A" text-anchor="start">Contextes transverses</text>
+<text x="634" y="150.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">AuthContext : session, login/logout</text>
+<text x="634" y="166.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">ThemeContext : clair / sombre</text>
+<text x="634" y="182.4" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">I18nContext : français / anglais</text>
+<text x="634" y="198.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">Composants UI : Button, Modal,</text>
+<text x="634" y="214.8" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">DataState, SemanticLabels</text>
+<rect x="898" y="104" width="282" height="138" rx="9" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="1.2"/>
+<text x="910" y="128" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0F172A" text-anchor="start">apiClient.js</text>
+<text x="910" y="150.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">fetch(&#x27;/api/v1&#x27; + chemin)</text>
+<text x="910" y="166.2" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">credentials: &#x27;include&#x27;</text>
+<text x="910" y="182.4" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">401 → un seul refresh mutualisé</text>
+<text x="910" y="198.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">puis rejeu de la requête</text>
+<text x="910" y="214.8" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="normal" fill="#475569" text-anchor="start">Événement auth-expired</text>
+<line x1="620" y1="266" x2="620" y2="318" stroke="#4F46E5" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arrow-indigo)"/>
+<rect x="430" y="274" width="380" height="36" rx="8" fill="#FFFFFF" stroke="#A5B4FC" stroke-width="1.2"/>
+<text x="620" y="297" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#4F46E5" text-anchor="middle">HTTPS · JSON · REST — /api/v1</text>
+<text x="830" y="286" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="600" fill="#475569" text-anchor="start">Cookies HttpOnly :</text>
+<text x="830" y="301" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.4" font-weight="normal" fill="#475569" text-anchor="start">wt_access (JWT 15 min) · wt_refresh (7 j, haché)</text>
+<rect x="40" y="318" width="1160" height="330" rx="14" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.4"/>
+<text x="60" y="344" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#0284C7" text-anchor="start">SERVEUR — NODE.JS 20+ ET EXPRESS 5</text>
+<text x="60" y="361" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="start">API REST découpée en modules ; aucune requête SQL n&#x27;est écrite dans le frontend</text>
+<rect x="60" y="374" width="1120" height="48" rx="8" fill="#E0F2FE" stroke="#7DD3FC" stroke-width="1.1"/>
+<text x="74" y="394" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0284C7" text-anchor="start">Chaîne de middlewares</text>
+<text x="74" y="411" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="start">Helmet · CORS avec identifiants · cookie-parser · JSON (1 Mo) · garde d&#x27;origine · limiteurs de débit</text>
+<text x="1162" y="411" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="normal" fill="#64748B" text-anchor="end">60/15 min · 10/15 min · 5/h</text>
+<text x="60" y="446" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="700" fill="#0284C7" text-anchor="start">Routeurs montés sous /api/v1</text>
+<rect x="60" y="454" width="176" height="44" rx="8" fill="#FFFFFF" stroke="#7DD3FC" stroke-width="1.2"/>
+<text x="70" y="473" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="700" fill="#0F172A" text-anchor="start">auth.routes.js</text>
+<text x="70" y="488" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="normal" fill="#64748B" text-anchor="start">8 endpoints</text>
+<rect x="249" y="454" width="176" height="44" rx="8" fill="#FFFFFF" stroke="#7DD3FC" stroke-width="1.2"/>
+<text x="259" y="473" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="700" fill="#0F172A" text-anchor="start">users.routes.js</text>
+<text x="259" y="488" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="normal" fill="#64748B" text-anchor="start">9 endpoints</text>
+<rect x="438" y="454" width="176" height="44" rx="8" fill="#FFFFFF" stroke="#7DD3FC" stroke-width="1.2"/>
+<text x="448" y="473" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="700" fill="#0F172A" text-anchor="start">projects.routes.js</text>
+<text x="448" y="488" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="normal" fill="#64748B" text-anchor="start">9 endpoints</text>
+<rect x="627" y="454" width="176" height="44" rx="8" fill="#FFFFFF" stroke="#7DD3FC" stroke-width="1.2"/>
+<text x="637" y="473" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="700" fill="#0F172A" text-anchor="start">tasks + comments</text>
+<text x="637" y="488" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="normal" fill="#64748B" text-anchor="start">12 endpoints</text>
+<rect x="816" y="454" width="176" height="44" rx="8" fill="#FFFFFF" stroke="#7DD3FC" stroke-width="1.2"/>
+<text x="826" y="473" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="700" fill="#0F172A" text-anchor="start">notifications</text>
+<text x="826" y="488" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="normal" fill="#64748B" text-anchor="start">4 endpoints</text>
+<rect x="1005" y="454" width="176" height="44" rx="8" fill="#FFFFFF" stroke="#7DD3FC" stroke-width="1.2"/>
+<text x="1015" y="473" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.2" font-weight="700" fill="#0F172A" text-anchor="start">insights.routes.js</text>
+<text x="1015" y="488" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="normal" fill="#64748B" text-anchor="start">4 endpoints</text>
+<rect x="60" y="512" width="1120" height="40" rx="8" fill="#FFFFFF" stroke="#BAE6FD" stroke-width="1.1"/>
+<text x="74" y="530" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.6" font-weight="600" fill="#0F172A" text-anchor="start">authenticate (JWT ou session de rafraîchissement) · requireRoles(ADMIN, PROJECT_MANAGER)</text>
+<text x="74" y="545" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="normal" fill="#475569" text-anchor="start">validate({ params, query, body }) avec schémas Zod · erreurs normalisées { success:false, error:{ code, message, details } }</text>
+<rect x="60" y="566" width="268" height="62" rx="8" fill="#F8FAFC" stroke="#7DD3FC" stroke-width="1.1"/>
+<text x="72" y="585" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0284C7" text-anchor="start">authService</text>
+<text x="72" y="601" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="normal" fill="#475569" text-anchor="start">bcrypt 12 tours · JWT</text>
+<text x="72" y="615" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="normal" fill="#475569" text-anchor="start">sessions opaques hachées</text>
+<rect x="341" y="566" width="268" height="62" rx="8" fill="#F8FAFC" stroke="#7DD3FC" stroke-width="1.1"/>
+<text x="353" y="585" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0284C7" text-anchor="start">accessControl</text>
+<text x="353" y="601" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="normal" fill="#475569" text-anchor="start">RBAC projet / tâche</text>
+<text x="353" y="615" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="normal" fill="#475569" text-anchor="start">règles d&#x27;archivage</text>
+<rect x="622" y="566" width="268" height="62" rx="8" fill="#F8FAFC" stroke="#7DD3FC" stroke-width="1.1"/>
+<text x="634" y="585" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0284C7" text-anchor="start">notificationService</text>
+<text x="634" y="601" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="normal" fill="#475569" text-anchor="start">affectation · statut</text>
+<text x="634" y="615" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="normal" fill="#475569" text-anchor="start">échéances dédupliquées</text>
+<rect x="903" y="566" width="268" height="62" rx="8" fill="#F8FAFC" stroke="#7DD3FC" stroke-width="1.1"/>
+<text x="915" y="585" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#0284C7" text-anchor="start">repositories</text>
+<text x="915" y="601" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="normal" fill="#475569" text-anchor="start">SQL paramétré</text>
+<text x="915" y="615" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.9" font-weight="normal" fill="#475569" text-anchor="start">withTransaction</text>
+<line x1="620" y1="648" x2="620" y2="692" stroke="#15803D" stroke-width="2.4" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+<rect x="520" y="656" width="200" height="34" rx="8" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1.2"/>
+<text x="620" y="678" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="700" fill="#15803D" text-anchor="middle">SQL — pool mysql2 · transactions</text>
+<rect x="40" y="692" width="1160" height="118" rx="14" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.4"/>
+<text x="60" y="718" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#15803D" text-anchor="start">MYSQL 8 — BASE watchtower_db</text>
+<text x="60" y="735" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#475569" text-anchor="start">InnoDB · utf8mb4_unicode_ci · horodatages UTC · migrations versionnées 001 → 004</text>
+<rect x="60" y="750" width="202" height="20" rx="5" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+<text x="68" y="764" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.8" font-weight="normal" fill="#0F172A" text-anchor="start">users</text>
+<rect x="280" y="750" width="202" height="20" rx="5" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+<text x="288" y="764" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.8" font-weight="normal" fill="#0F172A" text-anchor="start">projects</text>
+<rect x="500" y="750" width="202" height="20" rx="5" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+<text x="508" y="764" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.8" font-weight="normal" fill="#0F172A" text-anchor="start">project_members</text>
+<rect x="720" y="750" width="202" height="20" rx="5" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+<text x="728" y="764" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.8" font-weight="normal" fill="#0F172A" text-anchor="start">tasks</text>
+<rect x="940" y="750" width="202" height="20" rx="5" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+<text x="948" y="764" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.8" font-weight="normal" fill="#0F172A" text-anchor="start">comments</text>
+<rect x="60" y="775" width="202" height="20" rx="5" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+<text x="68" y="789" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.8" font-weight="normal" fill="#0F172A" text-anchor="start">notifications</text>
+<rect x="280" y="775" width="202" height="20" rx="5" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+<text x="288" y="789" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.8" font-weight="normal" fill="#0F172A" text-anchor="start">activity_logs</text>
+<rect x="500" y="775" width="202" height="20" rx="5" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+<text x="508" y="789" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.8" font-weight="normal" fill="#0F172A" text-anchor="start">user_sessions</text>
+<rect x="720" y="775" width="202" height="20" rx="5" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+<text x="728" y="789" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.8" font-weight="normal" fill="#0F172A" text-anchor="start">password_reset_tokens</text>
+<rect x="940" y="775" width="202" height="20" rx="5" fill="#FFFFFF" stroke="#86EFAC" stroke-width="1"/>
+<text x="948" y="789" font-family="'Cascadia Mono', Consolas, monospace" font-size="9.8" font-weight="normal" fill="#0F172A" text-anchor="start">audit_logs</text>
+<rect x="40" y="822" width="1160" height="26" rx="6" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1.2"/>
+<text x="52" y="839" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.2" font-weight="normal" fill="#B45309" text-anchor="start">Règle structurante : le navigateur ne dialogue jamais directement avec MySQL ; l&#x27;API valide, autorise et journalise chaque opération.</text>
+</svg>

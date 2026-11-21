@@ -22,12 +22,12 @@ import { Avatar } from '../ui/DataState.jsx';
 import { useTheme } from '../../styles/ThemeContext.jsx';
 import { useI18n } from '../../i18n/I18nContext.jsx';
 import { useAuth } from '../../features/auth/AuthContext.jsx';
-import { notificationsApi } from '../../services/watchtowerApi.js';
+import { NOTIFICATIONS_UPDATED_EVENT, notificationsApi } from '../../services/watchtowerApi.js';
 
 export function AppShell({ children }) {
   const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useI18n();
-  const { user, previewMode, logout } = useAuth();
+  const { user, logout } = useAuth();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [unreadCount, setUnreadCount] = useState(0);
   const location = useLocation();
@@ -47,12 +47,9 @@ export function AppShell({ children }) {
     if (!user) return undefined;
     let active = true;
     notificationsApi
-      .list()
+      .unreadCount()
       .then((res) => {
-        if (active) {
-          const rows = res?.data || [];
-          setUnreadCount(rows.filter((n) => !n.isRead).length);
-        }
+        if (active) setUnreadCount(res?.data?.count || 0);
       })
       .catch(() => {
         if (active) setUnreadCount(0);
@@ -61,6 +58,16 @@ export function AppShell({ children }) {
       active = false;
     };
   }, [user, location.pathname]);
+
+  useEffect(() => {
+    if (!user) return undefined;
+    const onNotificationsUpdated = (event) => {
+      const count = event?.detail?.unreadCount;
+      if (typeof count === 'number') setUnreadCount(count);
+    };
+    window.addEventListener(NOTIFICATIONS_UPDATED_EVENT, onNotificationsUpdated);
+    return () => window.removeEventListener(NOTIFICATIONS_UPDATED_EVENT, onNotificationsUpdated);
+  }, [user]);
 
   const navItems = [
     { to: '/', icon: LayoutDashboard, key: 'nav.dashboard', end: true },
@@ -98,7 +105,7 @@ export function AppShell({ children }) {
 
   const renderNav = (onSelect) => (
     <>
-      <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto" aria-label="Primary">
+      <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto" aria-label={t('nav.primary')}>
         {navItems.map((item) => {
           const Icon = item.icon;
           return (
@@ -204,11 +211,6 @@ export function AppShell({ children }) {
             <h1 className="text-base sm:text-lg font-semibold tracking-tight truncate">
               {getPageTitle()}
             </h1>
-            {previewMode && (
-              <span className="hidden md:inline text-xs font-medium text-[#D97706] dark:text-[#FBBF24] whitespace-nowrap">
-                · {t('common.previewBadge')}
-              </span>
-            )}
           </div>
 
           <div className="flex items-center gap-2.5 sm:gap-3 shrink-0">

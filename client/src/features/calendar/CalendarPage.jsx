@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useI18n } from '../../i18n/I18nContext.jsx';
-import { projectsApi, tasksApi } from '../../services/watchtowerApi.js';
+import { insightsApi, projectsApi } from '../../services/watchtowerApi.js';
 import { Button } from '../../components/ui/Button.jsx';
 import { ErrorBanner, LoadingSkeleton } from '../../components/ui/DataState.jsx';
 
@@ -26,14 +26,20 @@ export function CalendarPage() {
   const [view, setView] = useState('month');
   const [cursorDate, setCursorDate] = useState(() => startOfDay(new Date()));
   const [projects, setProjects] = useState([]);
-  const [tasks, setTasks] = useState([]);
+  const [calendarEvents, setCalendarEvents] = useState([]);
   const [projectFilter, setProjectFilter] = useState('ALL');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   const fetchCalendarData = useCallback(async () => {
-    const [projRes, taskRes] = await Promise.all([projectsApi.list(), tasksApi.listAll()]);
-    return { projects: projRes?.data || [], tasks: taskRes?.data || [] };
+    const [projRes, eventsRes] = await Promise.all([
+      projectsApi.list(),
+      insightsApi.calendarEvents(),
+    ]);
+    return {
+      projects: projRes?.data || [],
+      events: eventsRes?.data || [],
+    };
   }, []);
 
   useEffect(() => {
@@ -42,7 +48,7 @@ export function CalendarPage() {
       .then((res) => {
         if (!active) return;
         setProjects(res.projects);
-        setTasks(res.tasks);
+        setCalendarEvents(res.events);
         setLoading(false);
       })
       .catch((err) => {
@@ -55,30 +61,22 @@ export function CalendarPage() {
     };
   }, [fetchCalendarData, t]);
 
-  const events = [
-    ...tasks
-      .filter((item) => item.dueDate)
-      .filter((item) => projectFilter === 'ALL' || String(item.projectId) === String(projectFilter))
-      .map((item) => ({
-        id: `task-${item.id}`,
+  // Events come from the dedicated server endpoint, which reads all accessible
+  // tasks/projects rather than the 20-row default of a list call.
+  const events = calendarEvents
+    .filter((item) => projectFilter === 'ALL' || String(item.projectId) === String(projectFilter))
+    .map((item) => {
+      const isProject = item.type === 'PROJECT_DUE';
+      const taskDate = new Date(item.dateTime || item.date);
+      return {
+        id: item.id,
         title: item.title,
-        kind: 'task',
-        date: new Date(item.dueDate),
-        isOverdue: item.isOverdue,
-        sublabel: item.projectName,
-      })),
-    ...projects
-      .filter((p) => p.dueDate)
-      .filter((p) => projectFilter === 'ALL' || String(p.id) === String(projectFilter))
-      .map((p) => ({
-        id: `proj-${p.id}`,
-        title: p.name,
-        kind: 'project',
-        date: new Date(`${String(p.dueDate).slice(0, 10)}T12:00:00`),
-        isOverdue: false,
-        sublabel: t('calendar.projectDue'),
-      })),
-  ];
+        kind: isProject ? 'project' : 'task',
+        date: isProject ? new Date(`${String(item.date).slice(0, 10)}T12:00:00`) : taskDate,
+        isOverdue: !isProject && item.status !== 'DONE' && taskDate < new Date(),
+        sublabel: isProject ? t('calendar.projectDue') : item.projectName,
+      };
+    });
 
   const shiftCursor = (dir) => {
     const d = new Date(cursorDate);

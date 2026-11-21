@@ -38,7 +38,7 @@ export function errorHandler(err, req, res, _next) {
   }
 
   if (!env.isTest) {
-    console.error(`[WatchTower API Error] ${req.method} ${req.originalUrl}:`, err?.message || 'Unknown error');
+    console.error(`[WatchTower API Error] ${req.method} ${req.path}:`, err?.message || 'Unknown error');
   }
 
   return res.status(500).json({

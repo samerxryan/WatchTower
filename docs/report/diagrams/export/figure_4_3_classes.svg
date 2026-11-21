@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="940" viewBox="0 0 1240 940">
+<defs>
+<marker id="arrow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#0F172A"/></marker>
+<marker id="arrow-indigo" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#4F46E5"/></marker>
+<marker id="arrow-red" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#DC2626"/></marker>
+<marker id="arrow-green" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#15803D"/></marker>
+<marker id="arrow-muted" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#64748B"/></marker>
+<marker id="open" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8" fill="none" stroke="#475569" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="open-indigo" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8" fill="none" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="open-red" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8" fill="none" stroke="#DC2626" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="hollow" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#FFFFFF" stroke="#4F46E5" stroke-width="1.4"/></marker>
+<marker id="diamond" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,4 L5,0 L10,4 L5,8 z" fill="#0F172A"/></marker>
+<marker id="diamond-white" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="10" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,4 L0,8 z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.4"/></marker>
+</defs>
+<rect width="1240" height="940" fill="#FFFFFF"/>
+<text x="40" y="28" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A" text-anchor="start">Modèle de classes du domaine (classes persistantes)</text>
+<text x="1200" y="28" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#64748B" text-anchor="end">Attributs dérivés des migrations 001–004 ; aucun ORM, comportement dans les services</text>
+<rect x="40" y="62" width="285" height="219" rx="7" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.35"/>
+<rect x="40" y="62" width="285" height="30" rx="7" fill="#4F46E5" stroke="none" stroke-width="1.2"/>
+<rect x="40" y="84" width="285" height="8" rx="0" fill="#4F46E5" stroke="none" stroke-width="1.2"/>
+<text x="51" y="83" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.6" font-weight="700" fill="#FFFFFF" text-anchor="start">« entité »  User</text>
+<text x="51" y="109" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ id : BIGINT «PK»</text>
+<text x="51" y="125" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ fullName : VARCHAR(120)</text>
+<text x="51" y="141" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ email : VARCHAR(255) «UQ»</text>
+<text x="51" y="157" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ passwordHash : VARCHAR(255)</text>
+<text x="51" y="173" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ role : ADMIN | PROJECT_MANAGER | TEAM_MEMBER</text>
+<text x="51" y="189" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ avatarUrl : VARCHAR(500)</text>
+<text x="51" y="205" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ isActive : BOOLEAN</text>
+<text x="51" y="221" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ preferredLanguage : fr | en</text>
+<text x="51" y="237" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ preferredTheme : light | dark</text>
+<text x="51" y="253" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ notificationPrefs : JSON</text>
+<text x="51" y="269" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ createdAt / updatedAt : DATETIME</text>
+<rect x="405" y="62" width="300" height="171" rx="7" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.35"/>
+<rect x="405" y="62" width="300" height="30" rx="7" fill="#4F46E5" stroke="none" stroke-width="1.2"/>
+<rect x="405" y="84" width="300" height="8" rx="0" fill="#4F46E5" stroke="none" stroke-width="1.2"/>
+<text x="416" y="83" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.6" font-weight="700" fill="#FFFFFF" text-anchor="start">« entité »  Project</text>
+<text x="416" y="109" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ id : BIGINT «PK»</text>
+<text x="416" y="125" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ name : VARCHAR(160)</text>
+<text x="416" y="141" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ description : TEXT</text>
+<text x="416" y="157" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ status : PLANNING | ACTIVE | ON_HOLD | COMPLETED | ARCHIVED</text>
+<text x="416" y="173" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ startDate / dueDate : DATE</text>
+<text x="416" y="189" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ ownerId : BIGINT «FK»</text>
+<text x="416" y="205" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ archivedAt : DATETIME</text>
+<text x="416" y="221" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ createdAt / updatedAt : DATETIME</text>
+<rect x="785" y="62" width="405" height="219" rx="7" fill="#EEF2FF" stroke="#4F46E5" stroke-width="1.35"/>
+<rect x="785" y="62" width="405" height="30" rx="7" fill="#4F46E5" stroke="none" stroke-width="1.2"/>
+<rect x="785" y="84" width="405" height="8" rx="0" fill="#4F46E5" stroke="none" stroke-width="1.2"/>
+<text x="796" y="83" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.6" font-weight="700" fill="#FFFFFF" text-anchor="start">« entité »  Task</text>
+<text x="796" y="109" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ id : BIGINT «PK»</text>
+<text x="796" y="125" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ projectId : BIGINT «FK»</text>
+<text x="796" y="141" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ title : VARCHAR(180)</text>
+<text x="796" y="157" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ description : TEXT</text>
+<text x="796" y="173" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ status : TODO | IN_PROGRESS | IN_REVIEW | DONE</text>
+<text x="796" y="189" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ priority : LOW | MEDIUM | HIGH | URGENT</text>
+<text x="796" y="205" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ assigneeId : BIGINT «FK, nullable»</text>
+<text x="796" y="221" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ createdBy : BIGINT «FK»</text>
+<text x="796" y="237" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ dueDate / completedAt : DATETIME</text>
+<text x="796" y="253" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ deletedAt : DATETIME «soft delete»</text>
+<text x="796" y="269" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ createdAt / updatedAt : DATETIME</text>
+<rect x="405" y="340" width="300" height="123" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.35"/>
+<rect x="405" y="340" width="300" height="30" rx="7" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<rect x="405" y="362" width="300" height="8" rx="0" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<text x="416" y="361" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.6" font-weight="700" fill="#FFFFFF" text-anchor="start">« association »  ProjectMember</text>
+<text x="416" y="387" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ id : BIGINT «PK»</text>
+<text x="416" y="403" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ projectId : BIGINT «FK»</text>
+<text x="416" y="419" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ userId : BIGINT «FK»</text>
+<text x="416" y="435" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ projectRole : MANAGER | MEMBER</text>
+<text x="416" y="451" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ joinedAt : DATETIME</text>
+<rect x="785" y="340" width="405" height="139" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.35"/>
+<rect x="785" y="340" width="405" height="30" rx="7" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<rect x="785" y="362" width="405" height="8" rx="0" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<text x="796" y="361" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.6" font-weight="700" fill="#FFFFFF" text-anchor="start">« entité »  Comment</text>
+<text x="796" y="387" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ id : BIGINT «PK»</text>
+<text x="796" y="403" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ taskId : BIGINT «FK»</text>
+<text x="796" y="419" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ authorId : BIGINT «FK»</text>
+<text x="796" y="435" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ content : TEXT</text>
+<text x="796" y="451" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ createdAt / updatedAt : DATETIME</text>
+<text x="796" y="467" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ deletedAt : DATETIME</text>
+<rect x="40" y="340" width="285" height="187" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.35"/>
+<rect x="40" y="340" width="285" height="30" rx="7" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<rect x="40" y="362" width="285" height="8" rx="0" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<text x="51" y="361" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.6" font-weight="700" fill="#FFFFFF" text-anchor="start">« entité »  Notification</text>
+<text x="51" y="387" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ id : BIGINT «PK»</text>
+<text x="51" y="403" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ userId : BIGINT «FK»</text>
+<text x="51" y="419" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ type : VARCHAR(60)</text>
+<text x="51" y="435" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ title / message : VARCHAR</text>
+<text x="51" y="451" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ payload : JSON</text>
+<text x="51" y="467" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ relatedEntityType / Id</text>
+<text x="51" y="483" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ dedupKey : VARCHAR(120) «UQ»</text>
+<text x="51" y="499" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ isRead / readAt</text>
+<text x="51" y="515" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ createdAt : DATETIME</text>
+<rect x="40" y="600" width="285" height="139" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.35"/>
+<rect x="40" y="600" width="285" height="30" rx="7" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<rect x="40" y="622" width="285" height="8" rx="0" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<text x="51" y="621" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.6" font-weight="700" fill="#FFFFFF" text-anchor="start">« technique »  UserSession</text>
+<text x="51" y="647" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ id : BIGINT «PK»</text>
+<text x="51" y="663" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ userId : BIGINT «FK»</text>
+<text x="51" y="679" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ tokenHash : CHAR(64) «UQ»</text>
+<text x="51" y="695" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ userAgent / ipAddress</text>
+<text x="51" y="711" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ expiresAt / revokedAt / lastUsedAt</text>
+<text x="51" y="727" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ createdAt : DATETIME</text>
+<rect x="405" y="555" width="300" height="139" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.35"/>
+<rect x="405" y="555" width="300" height="30" rx="7" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<rect x="405" y="577" width="300" height="8" rx="0" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<text x="416" y="576" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.6" font-weight="700" fill="#FFFFFF" text-anchor="start">« technique »  PasswordResetToken</text>
+<text x="416" y="602" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ id : BIGINT «PK»</text>
+<text x="416" y="618" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ userId : BIGINT «FK»</text>
+<text x="416" y="634" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ tokenHash : VARCHAR(255)</text>
+<text x="416" y="650" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ expiresAt : DATETIME</text>
+<text x="416" y="666" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ usedAt : DATETIME</text>
+<text x="416" y="682" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ createdAt : DATETIME</text>
+<rect x="785" y="530" width="405" height="139" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.35"/>
+<rect x="785" y="530" width="405" height="30" rx="7" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<rect x="785" y="552" width="405" height="8" rx="0" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<text x="796" y="551" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.6" font-weight="700" fill="#FFFFFF" text-anchor="start">« technique »  ActivityLog</text>
+<text x="796" y="577" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ id : BIGINT «PK»</text>
+<text x="796" y="593" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ actorId : BIGINT «FK, nullable»</text>
+<text x="796" y="609" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ projectId / taskId : BIGINT «FK, nullable»</text>
+<text x="796" y="625" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ action : VARCHAR(80)</text>
+<text x="796" y="641" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ description : VARCHAR(500)</text>
+<text x="796" y="657" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ createdAt : DATETIME</text>
+<rect x="405" y="755" width="300" height="123" rx="7" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.35"/>
+<rect x="405" y="755" width="300" height="30" rx="7" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<rect x="405" y="777" width="300" height="8" rx="0" fill="#CBD5E1" stroke="none" stroke-width="1.2"/>
+<text x="416" y="776" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.6" font-weight="700" fill="#FFFFFF" text-anchor="start">« technique »  AuditLog</text>
+<text x="416" y="802" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ id : BIGINT «PK»</text>
+<text x="416" y="818" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ actorId : BIGINT «FK, nullable»</text>
+<text x="416" y="834" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ action : VARCHAR(80)</text>
+<text x="416" y="850" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ details : JSON</text>
+<text x="416" y="866" font-family="'Cascadia Mono', Consolas, monospace" font-size="10.1" font-weight="normal" fill="#0F172A" text-anchor="start">+ createdAt : DATETIME</text>
+<line x1="325" y1="130" x2="405" y2="130" stroke="#4F46E5" stroke-width="1.6" stroke-linecap="round" marker-end="url(#hollow)"/>
+<rect x="329" y="114" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="342" y="126" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">1</text>
+<rect x="375" y="114" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="388" y="126" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<text x="365" y="116" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="normal" fill="#64748B" text-anchor="middle">possède</text>
+<line x1="325" y1="200" x2="405" y2="470" stroke="#4F46E5" stroke-width="1.4" stroke-linecap="round" marker-end="url(#hollow)"/>
+<rect x="325" y="236" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="338" y="248" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">1</text>
+<rect x="379" y="440" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="392" y="452" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<line x1="555" y1="207" x2="555" y2="340" stroke="#4F46E5" stroke-width="1.5" stroke-linecap="round" marker-end="url(#hollow)"/>
+<rect x="559" y="222" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="572" y="234" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">1</text>
+<rect x="559" y="322" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="572" y="334" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<text x="568" y="286" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="normal" fill="#64748B" text-anchor="start">appartient</text>
+<line x1="705" y1="130" x2="785" y2="130" stroke="#4F46E5" stroke-width="1.5" stroke-linecap="round" marker-end="url(#hollow)"/>
+<rect x="709" y="114" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="722" y="126" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">1</text>
+<rect x="755" y="114" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="768" y="126" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<text x="745" y="116" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="normal" fill="#64748B" text-anchor="middle">contient</text>
+<path d="M 260 286 L 260 313 L 990 313 L 990 283" fill="none" stroke="#4F46E5" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#hollow)"/>
+<rect x="277" y="297" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="290" y="309" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">1</text>
+<rect x="947" y="297" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="960" y="309" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<text x="625" y="307" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.5" font-weight="normal" fill="#64748B" text-anchor="middle">crée / assigne (createdBy, assigneeId)</text>
+<line x1="990" y1="283" x2="990" y2="340" stroke="#4F46E5" stroke-width="1.4" stroke-linecap="round" marker-end="url(#hollow)"/>
+<rect x="995" y="297" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="1008" y="309" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">1</text>
+<rect x="995" y="328" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="1008" y="340" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<line x1="180" y1="286" x2="180" y2="340" stroke="#4F46E5" stroke-width="1.4" stroke-linecap="round" marker-end="url(#hollow)"/>
+<rect x="184" y="297" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="197" y="309" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">1</text>
+<rect x="184" y="328" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="197" y="340" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<path d="M 40 220 L 20 220 L 20 690 L 40 690" fill="none" stroke="#475569" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#hollow)"/>
+<rect x="52" y="672" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="65" y="684" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">1</text>
+<rect x="52" y="592" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="65" y="604" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<path d="M 325 240 L 345 240 L 345 640 L 405 640" fill="none" stroke="#475569" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#hollow)"/>
+<rect x="352" y="624" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="365" y="636" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">1</text>
+<rect x="379" y="624" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="392" y="636" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<path d="M 1190 130 L 1215 130 L 1215 620 L 1190 620" fill="none" stroke="#475569" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#hollow)"/>
+<rect x="1155" y="604" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="1168" y="616" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<path d="M 20 690 L 20 810 L 405 810" fill="none" stroke="#475569" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#hollow)"/>
+<rect x="52" y="794" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="65" y="806" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">1</text>
+<rect x="377" y="794" width="26" height="15" rx="0" fill="#FFFFFF" stroke="none" stroke-width="1.2"/>
+<text x="390" y="806" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="700" fill="#4F46E5" text-anchor="middle">0..*</text>
+<path d="M 705 180 L 740 180 L 740 600 L 785 600" fill="none" stroke="#475569" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#hollow)"/>
+<rect x="40" y="892" width="1160" height="34" rx="6" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1.2"/>
+<text x="52" y="914" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="9.8" font-weight="normal" fill="#B45309" text-anchor="start">Remarque méthodologique : il n&#x27;existe pas de classes métier déclarées dans le code. Les rectangles ci-dessus sont des classes de domaine issues du schéma relationnel et des sérialiseurs ; les opérations sont portées par les modules repositories/ et services/, non par des méthodes de classe.</text>
+</svg>

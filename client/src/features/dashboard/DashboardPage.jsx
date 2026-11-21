@@ -15,17 +15,20 @@ export function DashboardPage() {
   const [projects, setProjects] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [activities, setActivities] = useState([]);
+  const [summary, setSummary] = useState(null);
 
   const fetchAll = useCallback(async () => {
-    const [projRes, taskRes, actRes] = await Promise.all([
+    const [projRes, taskRes, actRes, summaryRes] = await Promise.all([
       projectsApi.list(),
       tasksApi.listAll(),
       reportsApi.recentActivity(),
+      reportsApi.summary(),
     ]);
     return {
       projects: projRes?.data || [],
       tasks: taskRes?.data || [],
       activities: actRes?.data || [],
+      summary: summaryRes?.data || null,
     };
   }, []);
 
@@ -37,6 +40,7 @@ export function DashboardPage() {
         setProjects(data.projects);
         setTasks(data.tasks);
         setActivities(data.activities);
+        setSummary(data.summary);
         setError('');
         setLoading(false);
       })
@@ -58,6 +62,7 @@ export function DashboardPage() {
       setProjects(data.projects);
       setTasks(data.tasks);
       setActivities(data.activities);
+      setSummary(data.summary);
     } catch (err) {
       setError(err?.message || t('common.errorTitle'));
     } finally {
@@ -70,9 +75,12 @@ export function DashboardPage() {
   }
 
   const myTasks = tasks.filter((task) => task.assigneeId === user?.id && task.status !== 'DONE');
-  const completedCount = tasks.filter((task) => task.status === 'DONE').length;
-  const activeCount = tasks.filter((task) => task.status !== 'DONE').length;
-  const overdueCount = tasks.filter((task) => task.isOverdue).length;
+  // KPIs come from the server-side summary so they stay accurate even if the
+  // detailed lists are capped; fall back to the loaded rows if unavailable.
+  const completedCount = summary?.completedTasks ?? tasks.filter((task) => task.status === 'DONE').length;
+  const activeCount = summary?.pendingTasks ?? tasks.filter((task) => task.status !== 'DONE').length;
+  const overdueCount = summary?.overdueTasks ?? tasks.filter((task) => task.isOverdue).length;
+  const projectCount = summary?.totalProjects ?? projects.length;
 
   const upcomingDeadlines = [...tasks]
     .filter((task) => task.dueDate && task.status !== 'DONE')
@@ -83,7 +91,7 @@ export function DashboardPage() {
   const recentActivity = activities.slice(0, 6);
 
   const kpis = [
-    { label: t('dashboard.kpiProjects'), value: projects.length, icon: FolderKanban, color: 'text-[#6366F1] dark:text-[#818CF8]' },
+    { label: t('dashboard.kpiProjects'), value: projectCount, icon: FolderKanban, color: 'text-[#6366F1] dark:text-[#818CF8]' },
     { label: t('dashboard.kpiActiveTasks'), value: activeCount, icon: Clock, color: 'text-[#2563EB] dark:text-[#60A5FA]' },
     { label: t('dashboard.kpiCompletedTasks'), value: completedCount, icon: CheckCircle2, color: 'text-[#16A34A] dark:text-[#4ADE80]' },
     { label: t('dashboard.kpiOverdue'), value: overdueCount, icon: AlertCircle, color: 'text-[#DC2626] dark:text-[#F87171]' },

@@ -30,8 +30,6 @@ export const translations = {
       retry: 'Réessayer',
       overdue: 'En retard',
       today: "Aujourd'hui",
-      previewBadge: 'Aperçu UI · Données locales',
-      exitPreview: 'Quitter l’aperçu',
       previous: 'Précédent',
       next: 'Suivant',
       pageOf: 'Page {page} sur {total}',
@@ -63,6 +61,7 @@ export const translations = {
       URGENT: 'Urgente',
     },
     nav: {
+      primary: 'Navigation principale',
       dashboard: 'Tableau de bord',
       projects: 'Projets',
       tasks: 'Mes tâches',
@@ -111,10 +110,6 @@ export const translations = {
       passwordTooShort: 'Le mot de passe doit contenir au moins 8 caractères.',
       resetSent: 'Si un compte existe pour cet e-mail, les instructions ont été envoyées.',
       resetSuccess: 'Mot de passe réinitialisé. Vous pouvez maintenant vous connecter.',
-      previewSectionTitle: 'Aperçu Frontend sans Backend',
-      previewSectionDesc:
-        "Le backend d'authentification n'est pas encore connecté. Explorez l'interface complète avec le rôle de votre choix :",
-      enterAs: 'Explorer en tant que',
     },
     dashboard: {
       title: 'Tableau de bord',
@@ -281,8 +276,6 @@ export const translations = {
       retry: 'Retry',
       overdue: 'Overdue',
       today: 'Today',
-      previewBadge: 'UI Preview · Local State',
-      exitPreview: 'Exit preview',
       previous: 'Previous',
       next: 'Next',
       pageOf: 'Page {page} of {total}',
@@ -314,6 +307,7 @@ export const translations = {
       URGENT: 'Urgent',
     },
     nav: {
+      primary: 'Main navigation',
       dashboard: 'Dashboard',
       projects: 'Projects',
       tasks: 'My Tasks',
@@ -362,10 +356,6 @@ export const translations = {
       passwordTooShort: 'Password must be at least 8 characters.',
       resetSent: 'If an account matches that email, reset instructions have been sent.',
       resetSuccess: 'Password updated. You can now sign in.',
-      previewSectionTitle: 'Frontend Preview Without Backend',
-      previewSectionDesc:
-        'The authentication backend is not connected yet. Explore the full UI using any role:',
-      enterAs: 'Explore as',
     },
     dashboard: {
       title: 'Dashboard',
